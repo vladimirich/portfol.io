@@ -1,3 +1,28 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.portfolio-prefiew {
+  height: 200px;
+}
+
+.portfolio-plus {
+  border: none;
+}
+
+.portfolio-plus-icon {
+  margin-top: 60px;
+}
+
+.fa-blue {
+  color: #337ab7;
+}
+
+.image-preview-container {
+  overflow: hidden;
+  height: 198px;
+  border-radius: 3px;
+}
+.image-preview {
+  width: 100%;
+}

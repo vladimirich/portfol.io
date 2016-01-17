@@ -1,0 +1,35 @@
+<br />
+
+<%= render 'shared/flash' %>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Project
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <%= form_for(@project, url: projects_path, html: { multipart: true } ) do |f| %>
+            
+              <div class="form-group">
+                <%= f.label "Project title" %>
+                <%= f.text_field :title, class: 'form-control' %>
+                <p class="help-block"></p>
+              </div>
+
+              <div class="form-group">
+                <%= f.label "Project description" %>
+                <%= f.text_area :description, class: 'form-control', rows: 3 %>
+                <p class="help-block">Describe your project with a few words</p>
+              </div>
+
+              <%= f.submit 'Save', class: 'btn btn-default' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

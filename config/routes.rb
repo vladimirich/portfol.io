@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   constraints Clearance::Constraints::SignedIn.new do
     root to: 'users#show'
+
+    resources :projects
   end
 
   constraints Clearance::Constraints::SignedOut.new do

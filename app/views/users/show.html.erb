@@ -1,5 +1,27 @@
 <div class="row">
-  <div class="center hero-unit">
-    <h1>Portfolio | Add project</h1>
+  <div class="col-lg-3 col-md-6">
+    <h1>Portfolio</h1>
+  </div>
+</div>
+
+<div class="row">
+  <% current_user.projects.each do |project| %>
+    <div class="col-lg-3 col-md-6">
+      <div class="panel panel-primary portfolio-prefiew centered">
+        <div class='image-preview-container'>
+          <%= project_preview(project) %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-primary portfolio-prefiew portfolio-plus">
+      <div class="centered portfolio-plus-icon">
+        <%= link_to new_project_path, class: "" do %>
+          <i class="fa fa-blue fa-plus-circle fa-5x"></i>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
